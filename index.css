@@ -37,6 +37,12 @@ aside i.fa, aside i.fab {
   font-size: 0.9em;  /*font size for the icons*/
 }
 
+ul {
+  /* list-style-type: none;
+  display: flex;
+  border: 1px solid #4e4e4e; */
+}
+
 li {
   display: flex;
   padding: 0 20px;
@@ -59,6 +65,7 @@ li:nth-child(2n) {
 
 footer {
   flex: 0 0 90px;
+  display: flex;
   padding: 10px;
   background-color: rgba(61, 100, 158, .9);
   color: #fff;
@@ -114,4 +121,89 @@ footer {
   flex: 1 0 auto;
   list-style-type: none;
   padding: 5px 10px 0px;
+  overflow: scroll;
+  max-height: 21em;
+}
+
+.now-playing {
+  flex: 1.6 1.6 auto;
+  display: flex;
+  justify-content: flex-start;
+  margin-right: auto;
+}
+
+.now-playing img {
+  max-width: 7em;
+  margin-left: 1em;
+  padding-right: 2em;
+}
+
+.controls {
+  flex: 1.3 1.3 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media screen and (max-width: 64em) {
+  aside {
+    display: none;
+  }
+
+  li p {
+    flex: 0 0 50%;
+  }
+
+  li p:nth-child(3) {
+    text-align: right;
+  }
+
+  .music-head {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+  }
+
+  .music-head img {
+    width: 150px;
+  }
+
+  .catty-music {
+    padding: 0;
+  }
+
+  .catty-music div:nth-child(1) p:first-child {
+    margin: 20px 0;
+    font-size: 1em;
+  }
+
+  .catty-music div p:not(:first-child) {
+    display: none;
+  }
+
+  .catty-music:nth-child(2) {
+    display: flex;
+    align-items: space-between;
+  }
+
+  .music-list li {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .music-list li p:nth-child(even) {
+    display: none;
+  }
+
+  .now-playing img {
+    display: none;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: space-around;
+  }
+
 }
